@@ -1,0 +1,9 @@
+Como la consigna pide una breve explicación del mecanismo implementado, aquí la adjunto.
+
+En este proyecto se desarrolló un sistema correspondiente a la Opción 2: Péndulo con estructura, expandido en un péndulo doble articulado interactivo. El sistema reacciona dinámicamente ante la gravedad y permite al usuario interactuar aplicándole impulsos horizontales mediante la tecla Flecha Derecha.
+
+Joints Utilizados:
+
+RevoluteJoint (Joint Rotacional): Conecta la base rígida del techo (estática) con la primera masa dinámica. Su función es restringir la distancia al centro de giro permitiendo únicamente la rotación libre en un eje.
+
+DistanceJoint (Sistemas Elásticos): Une la primera masa con la segunda masa colgante. Utiliza la función b2LinearStiffness para otorgarle un comportamiento elástico amortiguado, permitiendo que el tramo inferior se estire y contraiga durante la oscilación.
